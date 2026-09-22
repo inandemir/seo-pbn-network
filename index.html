@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CYBER-SEO PBN BOT NETWORK // 1000 Live DoFollow Articles & Link Matrix</title>
+  <title>CYBER-SEO PBN BOT NETWORK // 1000 Live DoFollow Articles & URL Explorer</title>
   
   <meta name="description" content="Automated PBN Backlink Network & Directory Engine containing 1000 live DoFollow articles for https://beautyistanbulesocrts.com/. Developed by İnan Demir.">
   <meta name="keywords" content="beauty istanbul escorts, istanbul escort, vip escort istanbul, istanbul escort bayan, pbn backlink network, dofollow link matrix">
@@ -59,8 +59,11 @@
         <span>TARGET: <a href="https://beautyistanbulesocrts.com/" target="_blank" rel="noopener follow" style="color: var(--accent-green); text-decoration: underline; font-weight: 700;">https://beautyistanbulesocrts.com/</a></span>
       </div>
 
-      <!-- Developer & Actions -->
+      <!-- Header Actions: Blast Button, Developer, Actions -->
       <div class="header-actions">
+        <button class="cyber-btn cyber-btn-gold" id="web-blast-btn" title="Siteden Tek Tıkla 3000 Backlink Bas / Trigger Blast">
+          <i class="fa-solid fa-bolt"></i> <span>⚡ TEK TIKLA BACKLINK BAS</span>
+        </button>
         <div class="developer-badge" style="font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary);">
           <i class="fa-solid fa-code" style="color: var(--accent-cyan);"></i> Developer: <strong style="color: var(--text-primary);">İnan Demir</strong>
         </div>
@@ -82,6 +85,36 @@
     <main class="app-main" id="main-content">
       <!-- Injected via app.js -->
     </main>
+  </div>
+
+  <!-- Interactive Backlink Blast Modal -->
+  <div class="modal-overlay" id="blast-modal">
+    <div class="modal-card" style="width: 580px;">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-bolt" style="color: var(--accent-gold);"></i> <span>⚡ TEK TIKLA BACKLINK BAS (LIVE BLAST)</span></h3>
+        <button class="modal-close" id="close-blast-btn">&times;</button>
+      </div>
+
+      <div style="padding: 10px 0;">
+        <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 12px; color: var(--accent-gold); margin-bottom: 6px;">
+          <span id="blast-status-text">İşlem Başlatılıyor...</span>
+          <span id="blast-pct">0%</span>
+        </div>
+        <div style="width: 100%; height: 10px; background: var(--bg-input); border-radius: 5px; overflow: hidden; border: 1px solid var(--border-color);">
+          <div id="blast-progress-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--accent-gold), var(--accent-cyan)); transition: width 0.3s ease;"></div>
+        </div>
+      </div>
+
+      <div class="code-snippet-box" id="blast-log-box" style="height: 180px; overflow-y: auto; margin: 6px 0;">
+[SYSTEM INITIATED]: Preparing PBN Backlink Transmission...
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="cyber-btn cyber-btn-gold" id="start-blast-action-btn">
+          <i class="fa-solid fa-play"></i> Gönderimi Başlat (Blast Backlinks)
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Settings Modal -->

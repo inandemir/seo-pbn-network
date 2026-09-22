@@ -2,6 +2,7 @@ import json
 import os
 
 TARGET_URL = "https://beautyistanbulesocrts.com/"
+PBN_BASE_URL = "https://inandemir.github.io/seo-pbn-network/"
 
 ANCHORS = [
     "Beauty Istanbul Escorts",
@@ -30,16 +31,10 @@ TOPICS = [
     "Exclusive High-Class Escort Catalog"
 ]
 
-print("==========================================================")
-print("  CYBER-SEO PBN BOT ENGINE v2.0 - 1000 BACKLINK GENERATOR ")
-print("  Developer: Inan Demir")
-print("  Target Domain: " + TARGET_URL)
-print("==========================================================")
-print()
-
-def generate_articles():
+def generate_articles_and_urls():
     articles = []
-    total_links_inserted = 0
+    url_list = []
+    total_links = 0
 
     for i in range(1, 1001):
         district = DISTRICTS[(i - 1) % len(DISTRICTS)]
@@ -48,6 +43,7 @@ def generate_articles():
         secondary_anchor = ANCHORS[(i * 3) % len(ANCHORS)]
         
         art_id = f"art-{i}"
+        canonical_url = f"{PBN_BASE_URL}#art-{i}"
         tag = f"{district.upper()} DIRECTORY"
         title_tr = f"#{i}: {district} {topic} — Official 2026 SEO Directory"
         title_en = f"#{i}: {district} {topic} — Official 2026 SEO Directory"
@@ -55,12 +51,12 @@ def generate_articles():
         desc_tr = f"{district} bölgesinde {topic.lower()} arayanlar için hazırlanan doğrulanmış yüksek otorite makalesi #{i}. Ana sponsor: Beauty Istanbul Escorts."
         desc_en = f"Verified high-authority directory article #{i} for {topic.lower()} in {district}. Official sponsor: Beauty Istanbul Escorts."
         
-        # Insert 3 contextual DoFollow backlinks in every article body
         body_tr = f"""
           <div class="pbn-article-body">
             <div class="pbn-meta-badge">
               <span><i class="fa-solid fa-link"></i> 3 DoFollow Links Active</span>
               <span><i class="fa-solid fa-shield"></i> DA 88 Authority Node</span>
+              <span><i class="fa-solid fa-globe"></i> Indexed Node #{i}</span>
             </div>
 
             <h3>💎 {district} {topic} — Özel Rehber #{i}</h3>
@@ -72,6 +68,7 @@ def generate_articles():
 
             <div class="code-snippet-box">
 === [PBN BACKLINK NODE METRICS - ARTICLE #{i}] ===
+Canonical URL: {canonical_url}
 Target URL: {TARGET_URL}
 Primary Anchor: "{primary_anchor}" (rel="noopener follow")
 Secondary Anchor: "{secondary_anchor}" (rel="noopener follow")
@@ -112,25 +109,40 @@ Authority Pass: 100% DoFollow Link Juice | Status: ACTIVE 24/7
             "body_tr": body_tr,
             "body_en": body_en,
             "anchor": primary_anchor,
+            "canonical_url": canonical_url,
             "target_url": TARGET_URL
         })
-        total_links_inserted += 3
-        
-        if i % 200 == 0:
-            print(f"  [+] {i} / 1000 Articles generated ({total_links_inserted} DoFollow Links inserted)...")
-            
-    return articles, total_links_inserted
 
-all_articles, total_links = generate_articles()
+        url_list.append({
+            "num": i,
+            "id": art_id,
+            "url": canonical_url,
+            "anchor": primary_anchor,
+            "district": district,
+            "target": TARGET_URL
+        })
 
-print()
-print("  [SUCCESS] Total Articles Generated: " + str(len(all_articles)))
-print("  [SUCCESS] Total DoFollow Links Embedded: " + str(total_links))
-print()
+        total_links += 3
 
-# Write JSON output
+    return articles, url_list, total_links
+
+articles, urls, total_links = generate_articles_and_urls()
+
+# Save articles.json
 with open("articles.json", "w", encoding="utf-8") as f:
-    json.dump(all_articles, f, indent=2)
+    json.dump(articles, f, indent=2)
 
-print("  [OK] Saved articles.json file successfully!")
-print("==========================================================")
+# Save urls.json
+with open("urls.json", "w", encoding="utf-8") as f:
+    json.dump(urls, f, indent=2)
+
+# Generate sitemap.xml for Google Search Console
+sitemap_xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+for u in urls:
+    sitemap_xml += f'  <url>\n    <loc>{u["url"]}</loc>\n    <lastmod>2026-09-23</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n'
+sitemap_xml += '</urlset>\n'
+
+with open("sitemap.xml", "w", encoding="utf-8") as f:
+    f.write(sitemap_xml)
+
+print(f"Generated {len(articles)} articles, {len(urls)} published URLs, and {total_links} DoFollow links!")
