@@ -13,13 +13,13 @@ def run_backlink_blast():
     print("[SERVER API] 10,000+ Backlink Blast tetiklendi...")
     # Step 1: Run generate_pbn_network.py
     cmd_gen = [sys.executable, "generate_pbn_network.py"]
-    res_gen = subprocess.run(cmd_gen, capture_output=True, text=True, cwd=os.path.dirname(os.path.abspath(__file__)))
+    res_gen = subprocess.run(cmd_gen, capture_output=True, text=True, encoding='utf-8', errors='ignore', cwd=os.path.dirname(os.path.abspath(__file__)))
     
     # Step 2: Git commit & push
     try:
         subprocess.run(["git", "add", "."], cwd=os.path.dirname(os.path.abspath(__file__)))
         subprocess.run(["git", "commit", "-m", "feat: Auto 10,000+ DoFollow Backlink Blast for beautyistanbulesocrts.com"], cwd=os.path.dirname(os.path.abspath(__file__)))
-        push_res = subprocess.run(["git", "push", "origin", "master:main", "--force"], capture_output=True, text=True, cwd=os.path.dirname(os.path.abspath(__file__)))
+        push_res = subprocess.run(["git", "push", "origin", "master:main", "--force"], capture_output=True, text=True, encoding='utf-8', errors='ignore', cwd=os.path.dirname(os.path.abspath(__file__)))
         push_success = push_res.returncode == 0
         push_msg = push_res.stdout + push_res.stderr
     except Exception as e:
