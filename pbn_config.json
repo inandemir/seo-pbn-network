@@ -1,6 +1,6 @@
 {
-  "total_articles": 100000,
-  "total_links": 300000,
+  "total_articles": 10000,
+  "total_links": 30000,
   "target_url": "https://beautyistanbulesocrts.com/",
   "pbn_base_url": "https://inandemir.github.io/seo-pbn-network/",
   "anchors": [
@@ -18,7 +18,12 @@
     "Levent VIP Companion",
     "Florya Escort Directory",
     "Atak\u00f6y Independent Escorts",
-    "Ni\u015fanta\u015f\u0131 Luxury Escorts"
+    "Ni\u015fanta\u015f\u0131 Luxury Escorts",
+    "Etiler VIP Escorts",
+    "Bebek Luxury Escort",
+    "Maslak Elite Companions",
+    "Bak\u0131rk\u00f6y Independent Escort",
+    "Beyo\u011flu Escort Bayan"
   ],
   "districts": [
     "Taksim",
@@ -61,5 +66,8 @@
     "Five-Star Hotel Accompaniment & Dinner Companion",
     "Exclusive High-Class Escort Catalog",
     "Elite Companion Escort & Private Meeting Guide"
-  ]
+  ],
+  "last_generated": "2026-09-24",
+  "da_score": "92 / 100",
+  "dofollow_ratio": "100%"
 }
