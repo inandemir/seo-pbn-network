@@ -1,5 +1,5 @@
 /**
- * CYBER-SEO PBN BOT NETWORK // 1000 Article Engine
+ * CYBER-SEO PBN BOT NETWORK // 100,000 Article Engine
  * Developer & SEO Lead: İnan Demir
  * Target Domain: https://beautyistanbulesocrts.com/
  */
@@ -7,18 +7,19 @@
 window.SEO_PBN_CONFIG = {
   target_url: "https://beautyistanbulesocrts.com/",
   target_name: "Beauty Istanbul Escorts",
-  total_articles: 1000,
-  da_score: "88 / 100",
-  dofollow_status: "100% DoFollow Verified",
+  total_articles: 100000,
+  total_links: 300000,
+  da_score: "92 / 100",
+  dofollow_status: "100% DoFollow Verified (300,000 Anchors)",
   developer: "İnan Demir"
 };
 
 window.CYBER_TRANSLATIONS = {
   tr: {
-    badge_top: "1000 PBN MAKALESİ",
-    stat_lessons: "1000 SİLİNMEYEN MAKALENİN TAMAMI CANLI",
+    badge_top: "100,000 PBN MAKALESİ",
+    stat_lessons: "300,000 DOFOLLOW LINK AKTİF",
     level_header: "PBN KATEGORİ VE İNDEKSLER",
-    nav_all: "Tüm 1000 PBN Makalesi",
+    nav_all: "Tüm 100,000 PBN Makalesi",
     nav_taksim: "Taksim & Beyoğlu Ağı",
     nav_besiktas: "Beşiktaş & Nişantaşı Ağı",
     nav_sisli: "Şişli & Levent Ağı",
@@ -34,10 +35,10 @@ window.CYBER_TRANSLATIONS = {
     toast_settings: "PBN Ayarları uygulandı!"
   },
   en: {
-    badge_top: "1000 PBN ARTICLES",
-    stat_lessons: "1000 LIVE DOFOLLOW ARTICLES",
+    badge_top: "100,000 PBN ARTICLES",
+    stat_lessons: "300,000 DOFOLLOW LINKS ACTIVE",
     level_header: "PBN CATEGORIES & INDEXES",
-    nav_all: "All 1000 PBN Articles",
+    nav_all: "All 100,000 PBN Articles",
     nav_taksim: "Taksim & Beyoglu Network",
     nav_besiktas: "Besiktas & Nisantasi Network",
     nav_sisli: "Sisli & Levent Network",
